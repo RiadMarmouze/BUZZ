@@ -5,6 +5,7 @@ type Variant = "filled" | "outlined";
 type Theme = "light" | "dark";
 
 interface ButtonProps {
+  text?: String;
   variant?: Variant;
   colorTextLight?: string;
   colorTextLightHover?: string;
@@ -19,10 +20,10 @@ interface ButtonProps {
   lightBorderHoverColor?: string;
   darkBorderHoverColor?: string;
   theme?: Theme;
-  children: React.ReactNode;
 }
 
 const CustomButton: React.FC<ButtonProps> = ({
+  text = "Click",
   variant = "filled",
   colorTextLight = "text-white",
   colorTextDark = "text-white",
@@ -37,7 +38,6 @@ const CustomButton: React.FC<ButtonProps> = ({
   lightBorderHoverColor = "hover:border-blue-600",
   darkBorderHoverColor = "hover:border-blue-800",
   theme = "light",
-  children,
 }) => {
   const baseClasses = "px-4 py-2 rounded-xl focus:outline-none transition-all";
 
@@ -70,7 +70,7 @@ const CustomButton: React.FC<ButtonProps> = ({
 
   return (
     <button className={buttonClasses} >
-      {children}
+      {text}
     </button>
   );
 };

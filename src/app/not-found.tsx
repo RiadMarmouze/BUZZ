@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import "@/app/globals.css"; // Ensure global styles are imported
 import CustomButton from "./components/CustomButton/CustomButton";
 
@@ -27,23 +28,26 @@ export default function NotFoundPage() {
             </p>
           </div>
 
-          <CustomButton
-            children="Go to Home"
-            variant="filled"
-            theme="light"
-            colorTextLight="text-white"
-            colorTextDark="text-white"
-            colorTextLightHover="hover:text-gray-200"
-            colorTextDarkHover="hover:text-gray-400"
-            lightBackgroundColor="bg-primary-pink-500"
-            darkBackgroundColor="bg-primary-pink-800"
-            lightBackgroundHoverColor="hover:bg-primary-pink-600"
-            darkBackgroundHoverColor="hover:bg-primary-pink-900"
-            lightBorderColor="border-primary-pink-500"
-            darkBorderColor="border-primary-pink-800"
-            lightBorderHoverColor="hover:border-primary-pink-600"
-            darkBorderHoverColor="hover:border-primary-pink-900"
-          />
+          {/* Button */}
+          <Link href="/" passHref>
+            <CustomButton
+              text="Go to Home"
+              variant="filled"
+              theme="light"
+              colorTextLight="text-white"
+              colorTextDark="text-white"
+              colorTextLightHover="hover:text-gray-200"
+              colorTextDarkHover="hover:text-gray-400"
+              lightBackgroundColor="bg-primary-pink-500"
+              darkBackgroundColor="bg-primary-pink-800"
+              lightBackgroundHoverColor="hover:bg-primary-pink-600"
+              darkBackgroundHoverColor="hover:bg-primary-pink-900"
+              lightBorderColor="border-primary-pink-500"
+              darkBorderColor="border-primary-pink-800"
+              lightBorderHoverColor="hover:border-primary-pink-600"
+              darkBorderHoverColor="hover:border-primary-pink-900"
+            />
+          </Link>
         </div>
       </div>
     </div>
