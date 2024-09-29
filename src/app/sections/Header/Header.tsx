@@ -6,7 +6,6 @@ import TopNavbar from "@/app/components/TopNavbar/TopNavbar";
 import CustomButton from "@/app/components/CustomButton/CustomButton";
 import LogoText from "@public/assets/Images/Logo/logo(text).svg";
 import LogoIcon from "@public/assets/Images/Logo/logo(icon).svg";
-import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
@@ -14,12 +13,10 @@ const Header: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" passHref>
-            <div className="relative flex items-center gap-4">
-              <LogoIcon className="h-16 fill-primary-pink-500" />
-              <LogoText className="h-10" />
-            </div>
-          </Link>
+          <div className="relative flex items-center gap-4">
+            <LogoIcon className="h-16 fill-primary-pink-500" />
+            <LogoText className="h-10" />
+          </div>
 
           <TopNavbar />
 
