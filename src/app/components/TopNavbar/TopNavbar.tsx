@@ -11,7 +11,7 @@ const isActiveLink = (currentPath: string, linkPath: string) => {
 const TopNavbar: React.FC = () => {
   const pathname = usePathname();
   return (
-    <nav className={`${styles.navbar} flex-grow`}>
+    <nav className={`${styles.navbar}`}>
       <div className="hidden justify-center sm:flex sm:space-x-8">
         {navItems.map((item) => (
           <NavItemLink

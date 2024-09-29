@@ -1,4 +1,4 @@
 .header {
-    @apply bg-white shadow-md;
+    @apply bg-header-bg-primary-light shadow-md;
     /* Tailwind classes for background and shadow */
 }

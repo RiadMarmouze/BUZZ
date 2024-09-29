@@ -1,9 +1,9 @@
 .navbar {
-    @apply text-header-title1-text-light;
+    @apply text-primary-pink-100;
 }
 
 .activeLink {
-    @apply text-primary-pink-500 font-semibold;
+    @apply font-semibold text-header-bg-secondary-light;
     /* Tailwind utility for active state */
 }
 
@@ -13,11 +13,11 @@
 }
 
 .link:hover {
-    @apply text-primary-pink-400;
+    @apply text-primary-pink-200;
     /* Hover state */
 }
 
 .link:focus {
-    @apply ring-2 ring-primary-pink-300;
+    @apply ring-2 ring-primary-pink-100;
     /* Focus state */
 }

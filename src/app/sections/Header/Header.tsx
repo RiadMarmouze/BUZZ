@@ -11,17 +11,18 @@ import Link from "next/link";
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl border-b border-header-bg-secondary-light px-4 pb-4 pt-14 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" passHref>
-            <div className="relative flex items-center gap-4">
-              <LogoIcon className="h-16 fill-primary-pink-500" />
-              <LogoText className="h-10" />
-            </div>
-          </Link>
 
           <TopNavbar />
+
+          <Link href="/" passHref>
+            <div className="relative flex items-center gap-4">
+              <LogoIcon className="h-16 fill-header-bg-secondary-light" />
+              <LogoText className="h-10 fill-header-bg-secondary-light" />
+            </div>
+          </Link>
 
           {/* Sign In Button */}
           <div className="flex gap-4">
@@ -29,34 +30,48 @@ const Header: React.FC = () => {
               text="LOG IN"
               variant="filled"
               theme="light"
+
               colorTextLight="text-white"
-              colorTextDark="text-white"
-              colorTextLightHover="hover:text-gray-200"
-              colorTextDarkHover="hover:text-gray-400"
               lightBackgroundColor="bg-primary-pink-500"
-              darkBackgroundColor="bg-primary-pink-800"
-              lightBackgroundHoverColor="hover:bg-primary-pink-600"
-              darkBackgroundHoverColor="hover:bg-primary-pink-900"
-              lightBorderColor="border-primary-pink-500"
-              darkBorderColor="border-primary-pink-800"
               lightBorderHoverColor="hover:border-primary-pink-600"
+
+
+              colorTextLightHover="hover:text-gray-200"
+              lightBackgroundHoverColor="hover:bg-primary-pink-600"
+              lightBorderColor="border-primary-pink-500"
+
+
+              colorTextDark="text-white"
+              darkBackgroundColor="bg-primary-pink-800"
+              darkBorderColor="border-primary-pink-800"
+
+              
+              colorTextDarkHover="hover:text-gray-400"
+              darkBackgroundHoverColor="hover:bg-primary-pink-900"
               darkBorderHoverColor="hover:border-primary-pink-900"
+
             />
             <CustomButton
               text="SIGN UP"
-              variant="outlined"
+              variant="filled"
               theme="light"
-              colorTextLight="text-white"
-              colorTextDark="text-white"
-              colorTextLightHover="hover:text-gray-200"
-              colorTextDarkHover="hover:text-gray-400"
-              lightBackgroundColor="bg-primary-pink-500"
-              darkBackgroundColor="bg-primary-pink-800"
-              lightBackgroundHoverColor="hover:bg-primary-pink-500"
-              darkBackgroundHoverColor="hover:bg-primary-pink-900"
+              
+              colorTextLight="text-header-bg-primary-light"
+              lightBackgroundColor="bg-header-bg-secondary-light"
               lightBorderColor="border-header-title1-text-light"
-              darkBorderColor="border-primary-pink-800"
+
+              
+              colorTextLightHover="hover:text-primary-pink-700"
+              lightBackgroundHoverColor="hover:bg-primary-pink-100"
               lightBorderHoverColor="hover:border-primary-pink-500"
+
+
+              colorTextDark="text-white"
+              darkBackgroundColor="bg-primary-pink-800"
+              darkBorderColor="border-primary-pink-800"
+              
+              colorTextDarkHover="hover:text-gray-400"
+              darkBackgroundHoverColor="hover:bg-primary-pink-900"
               darkBorderHoverColor="hover:border-primary-pink-900"
             />
           </div>

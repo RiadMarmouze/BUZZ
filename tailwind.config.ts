@@ -22,7 +22,7 @@ const config: Config = {
         },
 
         
-        "header-bg-primary-light": "#ffffff",
+        "header-bg-primary-light": "#ff0066",
         "header-bg-secondary-light": "#ffffff",
         "body-bg-primary-light": "#ffffff",
         "body-bg-secondary-light": "#ffffff",

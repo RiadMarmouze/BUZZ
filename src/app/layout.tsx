@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header /> {/* Header with TopNavbar */}
-        <main className="min-h-screen">
+        <main className="relative min-h-screen">
           {/* Add padding to avoid overlap with navbar */}
           {children}
         </main>
