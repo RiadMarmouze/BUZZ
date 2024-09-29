@@ -1,0 +1,23 @@
+.navbar {
+    @apply text-header-title1-text-light;
+}
+
+.activeLink {
+    @apply text-primary-pink-500 font-semibold;
+    /* Tailwind utility for active state */
+}
+
+/* If you want to add specific styles for hover or focus, you can do that as well */
+.link {
+    @apply transition-colors duration-500;
+}
+
+.link:hover {
+    @apply text-primary-pink-400;
+    /* Hover state */
+}
+
+.link:focus {
+    @apply ring-2 ring-primary-pink-300;
+    /* Focus state */
+}

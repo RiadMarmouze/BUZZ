@@ -3,4 +3,11 @@
 @tailwind utilities;
 
 
-@layer utilities {}
+/* Custom Global Classes */
+.text-error {
+    @apply font-extrabold text-primary-pink-500;
+}
+
+.text-info {
+    @apply  text-body-title1-text-light;
+}
