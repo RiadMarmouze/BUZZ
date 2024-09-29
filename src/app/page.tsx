@@ -22,9 +22,9 @@ export default function Home() {
         </h2>
       </div>
       <div className="z-10 flex w-full items-center justify-center gap-16">
-        <MockUp1 />
-        <MockUp2 />
-        <MockUp3 />
+        <MockUp1 className="hidden lg:block" />
+        <MockUp2 className="block" />
+        <MockUp3 className="hidden lg:block" />
         {/* <Image
           src="/assets/Images/Common/mock-up1.png" // Place your SVG file in the public folder
           alt="Mock up"
