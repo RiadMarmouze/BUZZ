@@ -5,7 +5,7 @@ type Variant = "filled" | "outlined";
 type Theme = "light" | "dark";
 
 interface ButtonProps {
-  text?: String;
+  text?: string;
   variant?: Variant;
   colorTextLight?: string;
   colorTextLightHover?: string;
