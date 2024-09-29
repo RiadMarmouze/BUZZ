@@ -21,7 +21,7 @@ export default function NotFoundPage() {
           {/* Text Section */}
           <div className="text-center">
             <h1 className="text-error">
-              Oops! The page you're looking for doesn't exist.
+              Oops! The page you&apos;re looking for doesn&apos;t exist.
             </h1>
             <p className="text-info mt-4">
               You may have mistyped the address, or the page has been moved.
