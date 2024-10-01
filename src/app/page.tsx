@@ -78,7 +78,7 @@ export default function Home() {
 
   return (
     <div className="relative flex flex-col gap-20">
-      <div className="absolute top-0 h-[80dvh] w-full bg-primary-pink-500">
+      <div className="absolute top-0 h-[800px] w-full bg-primary-pink-500">
         <div className="absolute bottom-0 z-20 flex flex-col gap-5 p-10">
           <Link
             href="https://www.facebook.com/share/ZjsHnDd8kC6fD99v/?mibextid=qi2Omg"
@@ -128,11 +128,11 @@ export default function Home() {
       </h1>
 
       <div className=" w-[70%] mx-auto">
-        <div className="flex  relative flex-row justify-center">
-          <div className=" w-[50%] flex-shrink-0 flex flex-row justify-center">
+        <div className="flex  relative flex-row justify-center ">
+          <div className=" flex-grow flex-shrink-0 flex flex-row justify-end pr-60">
             <MockUp1 />
           </div>
-          <div className="flex  flex-col justify-evenly">
+          <div className="flex  w-[50%] flex-col justify-evenly">
             <h2 className="text-4xl  font-semibold">
               Digital Services provider
             </h2>
@@ -223,15 +223,18 @@ export default function Home() {
 
       <h1 className="text-center text-6xl font-semibold leading-none">FAQ’s</h1>
 
-      <div className=" w-[70%] mx-auto px-[10%] flex flex-col gap-10">
-        {faqs.map((item) => (
-          <FAQItem key={item.id} item={item} />
-        ))}
+      <div className="relative">
+        <div className="  w-[70%] mx-auto px-[10%] flex flex-col gap-10">
+          {faqs.map((item) => (
+            <FAQItem key={item.id} item={item} />
+          ))}
+          <div className=" -right-40 bottom-0  absolute w-80 h-80  border-[50px] border-primary-pink-500 rounded-full"></div>
+        </div>
       </div>
 
-      <div className=" w-[70%] mx-auto px-[5%]">
-        <div className="flex relative flex-row">
-          <div className="flex  flex-col justify-evenly">
+      <div className=" w-[70%]  relative mx-auto px-[5%]">
+        <div className="flex flex-row">
+          <div className="flex  w-[50%] flex-col justify-evenly">
             <h2 className="text-6xl font-semibold leading-none">
               Download <br /> the app
             </h2>
@@ -242,7 +245,7 @@ export default function Home() {
 
             <GetAppFrom />
           </div>
-          <div className=" w-[50%] flex-shrink-0 flex flex-row justify-end">
+          <div className=" flex-shrink-0 flex-grow flex flex-row   justify-end ">
             <MockUp4 />
           </div>
         </div>
