@@ -1,6 +1,6 @@
 /* app/components/Footer.module.css */
 .footer {
-    @apply bg-white shadow-md;
+    @apply bg-footer-bg-primary-light text-footer-title1-text-light;
     /* Tailwind utilities for background and shadow */
 }
 

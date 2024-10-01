@@ -26,7 +26,7 @@ const config: Config = {
         "header-bg-secondary-light": "#ffffff",
         "body-bg-primary-light": "#ffffff",
         "body-bg-secondary-light": "#ffffff",
-        "footer-bg-primary-light": "#ffffff",
+        "footer-bg-primary-light": "#ff0066",
         "footer-bg-secondary-light": "#ffffff",
 
         "header-bg-primary-dark": "#000000",
@@ -38,7 +38,12 @@ const config: Config = {
 
         "header-title1-text-light": "#000000",
         "body-title1-text-light": "#000000",
-        "footer-title1-text-light": "#000000",
+        
+        "footer-title1-text-light": "#ffffff",
+        "footer-title1-text-dark": "#000000",
+      },
+      boxShadow: {
+        "inner-custom": 'inset 0px 0px 20px 0px rgba(0, 0, 0, 0.08)',
       },
     },
   },
