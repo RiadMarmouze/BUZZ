@@ -1,11 +1,8 @@
 import React from "react";
 import styles from "./TopNavbar.module.css";
 import { NavItem, navItems } from "./TopNavbarData";
-import { usePathname } from "next/navigation";
-
 
 const TopNavbar: React.FC = () => {
-  const pathname = usePathname();
   return (
     <nav className={`${styles.navbar}`}>
       <ul className="mt-5 flex justify-center space-x-8 border-t border-header-bg-secondary-light pt-2 lg:mt-0 lg:border-none lg:pt-0">
