@@ -13,7 +13,7 @@ const TestimonialCard: React.FC<TestimonialItemProps> = ({
   const { id, content, imageUrl, name, role } = testimonialData;
 
   return (
-    <div className="card-shadow-drop-down-effect flex h-full flex-col gap-8 bg-body-bg-primary-light px-10 pb-10 pt-10">
+    <div key={id} className="card-shadow-drop-down-effect flex h-full flex-col gap-8 bg-body-bg-primary-light px-10 pb-10 pt-10">
       <p className="flex-grow text-sm lg:text-xl">{content}</p>
       <div className="flex flex-row items-center gap-4">
         <div className="relative h-8 w-8 overflow-clip rounded-full lg:h-12 lg:w-12">
