@@ -79,7 +79,7 @@ export default function Home() {
   return (
     <div className="relative flex w-full flex-col items-center gap-10 overflow-hidden py-8 lg:gap-20 lg:py-20">
       <div className="absolute top-0 h-[500px] w-full bg-primary-pink-500 lg:h-[800px]">
-        <ul className="flex h-full flex-col justify-end gap-5 p-3 lg:p-10">
+        <ul className="flex h-full flex-col justify-end gap-2 p-3 lg:gap-5 lg:p-10">
           <li key={1}>
             <Link
               href="https://www.facebook.com/share/ZjsHnDd8kC6fD99v/?mibextid=qi2Omg"
