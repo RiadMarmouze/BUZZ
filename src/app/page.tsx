@@ -78,7 +78,7 @@ export default function Home() {
 
   return (
     <div className="relative flex w-full flex-col items-center gap-10 overflow-hidden py-8 lg:gap-20 lg:py-20">
-      <div className="absolute top-0 -z-10 h-[500px] w-full bg-primary-pink-500 lg:h-[800px]">
+      <div className="absolute top-0 h-[500px] w-full bg-primary-pink-500 lg:h-[800px]">
         <div className="flex h-full flex-col justify-end gap-5 p-3 lg:p-10">
           <Link
             href="https://www.facebook.com/share/ZjsHnDd8kC6fD99v/?mibextid=qi2Omg"
@@ -100,7 +100,7 @@ export default function Home() {
 
       <section
         id="home"
-        className="flex flex-col items-center gap-8 text-body-bg-primary-light lg:gap-10"
+        className="z-10 flex flex-col items-center gap-8 text-body-bg-primary-light lg:gap-10"
       >
         <h1 className="text-hero text-center">
           The Future of Online
