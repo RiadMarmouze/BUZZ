@@ -2,6 +2,7 @@ import MockUp1 from "@public/assets/Images/Common/mock-up1.svg";
 import MockUp2 from "@public/assets/Images/Common/mock-up2.svg";
 import MockUp3 from "@public/assets/Images/Common/mock-up3.svg";
 import MockUp4 from "@public/assets/Images/Common/mock-up4.svg";
+import MockUp5 from "@public/assets/Images/Common/mock-up5.svg";
 import Facebook from "@public/assets/Icons/Media/facebook.svg";
 import Instagram from "@public/assets/Icons/Media/instagram.svg";
 import X from "@public/assets/Icons/Media/x.svg";
@@ -170,7 +171,7 @@ export default function Home() {
       <section className="px-5 lg:px-[15%]">
         <div className="flex flex-grow flex-row justify-center gap-5 lg:gap-0">
           <div className="flex flex-shrink-0 flex-row items-center justify-center lg:w-[50%]">
-            <MockUp3 className="w-[100px] lg:w-[350px]" />
+            <MockUp4 className="w-[100px] lg:w-[350px]" />
           </div>
           <div className="flex w-full flex-col justify-evenly gap-2 lg:w-[50%] lg:gap-0">
             <h2 className="text-section-subtitle">Digital Services provider</h2>
@@ -270,7 +271,7 @@ export default function Home() {
             <GetAppFrom />
           </div>
           <div className="flex flex-shrink flex-row justify-end">
-            <MockUp4 className="w-[150px] lg:w-[350px]" />
+            <MockUp5 className="w-[150px] lg:w-[350px]" />
           </div>
         </div>
       </section>
