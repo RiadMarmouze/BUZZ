@@ -6,10 +6,10 @@ import styles from "./Footer.module.css";
 import Link from "next/link";
 import LogoText from "@public/assets/Images/Logo/logo(text).svg";
 import LogoIcon from "@public/assets/Images/Logo/logo(icon).svg";
-import Facebook from "@public/assets/Images/Common/Media/facebook.svg";
-import Instagram from "@public/assets/Images/Common/Media/instagram.svg";
-import X from "@public/assets/Images/Common/Media/x.svg";
-import LinkedIn from "@public/assets/Images/Common/Media/linkedin.svg";
+import Facebook from "@public/assets/Icons/Media/facebook.svg";
+import Instagram from "@public/assets/Icons/Media/instagram.svg";
+import X from "@public/assets/Icons/Media/x.svg";
+import LinkedIn from "@public/assets/Icons/Media/linkedin.svg";
 
 const Footer: React.FC = () => {
   return (

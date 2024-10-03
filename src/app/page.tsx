@@ -79,23 +79,34 @@ export default function Home() {
   return (
     <div className="relative flex w-full flex-col items-center gap-10 overflow-hidden py-8 lg:gap-20 lg:py-20">
       <div className="absolute top-0 h-[500px] w-full bg-primary-pink-500 lg:h-[800px]">
-        <div className="flex h-full flex-col justify-end gap-5 p-3 lg:p-10">
-          <Link
-            href="https://www.facebook.com/share/ZjsHnDd8kC6fD99v/?mibextid=qi2Omg"
-            passHref
-          >
-            <Facebook className="fill-white hover:fill-primary-pink-100" />
-          </Link>
-          <Link href="https://www.instagram.com/buzz.apex/" passHref>
-            <Instagram className="fill-white hover:fill-primary-pink-100" />
-          </Link>
-          <Link href="/" passHref>
-            <X className="fill-white hover:fill-primary-pink-100" />
-          </Link>
-          <Link href="https://www.linkedin.com/company/buzz-by-apex/" passHref>
-            <LinkedIn className="fill-white hover:fill-primary-pink-100" />
-          </Link>
-        </div>
+        <ul className="flex h-full flex-col justify-end gap-5 p-3 lg:p-10">
+          <li key={1}>
+            <Link
+              href="https://www.facebook.com/share/ZjsHnDd8kC6fD99v/?mibextid=qi2Omg"
+              passHref
+            >
+              <Facebook className="w-8 fill-white hover:fill-primary-pink-100 lg:w-12" />
+            </Link>
+          </li>
+          <li key={2}>
+            <Link href="https://www.instagram.com/buzz.apex/" passHref>
+              <Instagram className="w-8 fill-white hover:fill-primary-pink-100 lg:w-12" />
+            </Link>
+          </li>
+          <li key={3}>
+            <Link href="/" passHref>
+              <X className="w-8 fill-white hover:fill-primary-pink-100 lg:w-12" />
+            </Link>
+          </li>
+          <li key={4}>
+            <Link
+              href="https://www.linkedin.com/company/buzz-by-apex/"
+              passHref
+            >
+              <LinkedIn className="w-8 fill-white hover:fill-primary-pink-100 lg:w-12" />
+            </Link>
+          </li>
+        </ul>
       </div>
 
       <section
@@ -120,7 +131,8 @@ export default function Home() {
             text="LOG IN"
             variant="filled"
             theme="light"
-            padding="py-2 px-4"
+            raduis="rounded-md lg:rounded-2xl"
+            padding="py-3 px-6"
             textSize="text-xs"
             colorTextLight="text-white"
             lightBackgroundColor="bg-primary-pink-700"
@@ -139,7 +151,8 @@ export default function Home() {
             text="SIGN UP"
             variant="filled"
             theme="light"
-            padding="py-2 px-4"
+            raduis="rounded-md lg:rounded-2xl"
+            padding="py-3 px-6"
             textSize="text-xs"
             colorTextLight="text-header-bg-primary-light"
             lightBackgroundColor="bg-header-bg-secondary-light"
@@ -162,7 +175,9 @@ export default function Home() {
           <MockUp3 className="hidden w-[250px] lg:block" />
         </div>
 
-        <GetAppFrom />
+        <div className="flex w-fit flex-row gap-8">
+          <GetAppFrom />
+        </div>
       </section>
 
       <h1 id="about" className="text-section-title text-center">
@@ -199,7 +214,8 @@ export default function Home() {
               <CustomButton
                 text="Learn more"
                 variant="filled"
-                padding="px-2 py-2 lg:px-4 lg:py-2"
+                raduis="rounded-md lg:rounded-xl"
+                padding="px-2 py-2 lg:px-5 lg:py-3"
                 fontWeight="font-bold"
                 textSize="text-[10px] lg:text-base"
                 theme="light"
@@ -258,7 +274,7 @@ export default function Home() {
       </section>
 
       <section className="px-5 lg:px-[15%]">
-        <div className="flex flex-row gap-10 lg:gap-40">
+        <div className="flex w-full flex-row gap-10 lg:gap-40">
           <div className="flex flex-grow flex-col justify-evenly">
             <h2 className="text-section-title">
               Download <br /> the app
@@ -268,7 +284,9 @@ export default function Home() {
               latest update is here.
             </p>
 
-            <GetAppFrom />
+            <div className="flex w-fit flex-col gap-5 lg:flex-row lg:gap-8">
+              <GetAppFrom />
+            </div>
           </div>
           <div className="flex flex-shrink flex-row justify-end">
             <MockUp5 className="w-[150px] lg:w-[350px]" />
@@ -305,7 +323,8 @@ export default function Home() {
               text="Get Started"
               variant="filled"
               theme="light"
-              padding="px-10 py-4"
+              padding="px-10 py-3 lg:py-4"
+              raduis="rounded-md lg:rounded-xl"
               textSize="text-sm lg:text-base"
               colorTextLight="text-header-bg-primary-light"
               lightBackgroundColor="bg-header-bg-secondary-light"

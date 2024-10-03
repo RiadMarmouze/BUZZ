@@ -8,6 +8,7 @@ interface ButtonProps {
   text?: string;
   variant?: Variant;
   padding?:string;
+  raduis?:string;
   fontWeight?:string;
   textSize?:string;
   colorTextLight?: string;
@@ -29,6 +30,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   text = "Click",
   variant = "filled",
   padding = "px-10 py-4",
+  raduis = "rounded-xl",
   fontWeight = "font-bold",
   textSize = "text-base",
   colorTextLight = "text-white",
@@ -45,7 +47,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   darkBorderHoverColor = "hover:border-blue-800",
   theme = "light",
 }) => {
-  const baseClasses = `${padding} ${fontWeight} ${textSize} rounded-xl text-nowrap  focus:outline-none transition-all`;
+  const baseClasses = `${padding} ${fontWeight} ${textSize} ${raduis} text-nowrap  focus:outline-none transition-all`;
 
   // Conditionally generate classes based on theme, variant, and color props
   const buttonClasses = classNames(baseClasses, {

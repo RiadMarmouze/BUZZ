@@ -8,14 +8,20 @@ import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
-    <div className="px-10 pt-5 lg:pt-14">
-      <div className="flex flex-col-reverse items-center justify-between lg:flex-row lg:border-b lg:border-header-bg-secondary-light lg:pb-5">
+    <div className="flex justify-center px-10 pt-5 lg:pt-14">
+      <Link href="/" passHref className="absolute hidden lg:block">
+        <div className="flex items-center gap-4">
+          <LogoIcon className="lg:h-18 h-12 fill-header-bg-secondary-light" />
+          <LogoText className="h-6 fill-header-bg-secondary-light lg:h-10" />
+        </div>
+      </Link>
+      <div className="flex w-full flex-col-reverse items-center justify-between lg:flex-row lg:border-b lg:border-header-bg-secondary-light lg:pb-5">
         {/* Logo */}
 
         <TopNavbar />
 
-        <Link href="/" passHref>
-          <div className="relative flex items-center gap-4">
+        <Link href="/" passHref className="block lg:hidden">
+          <div className="flex items-center gap-4">
             <LogoIcon className="lg:h-18 h-12 fill-header-bg-secondary-light" />
             <LogoText className="h-6 fill-header-bg-secondary-light lg:h-10" />
           </div>
@@ -27,6 +33,7 @@ const Header: React.FC = () => {
             text="LOG IN"
             variant="filled"
             theme="light"
+            raduis="rounded-md lg:rounded-2xl"
             colorTextLight="text-white"
             lightBackgroundColor="bg-primary-pink-500"
             lightBorderHoverColor="hover:border-primary-pink-600"
@@ -44,6 +51,7 @@ const Header: React.FC = () => {
             text="SIGN UP"
             variant="filled"
             theme="light"
+            raduis="rounded-md lg:rounded-2xl"
             colorTextLight="text-header-bg-primary-light"
             lightBackgroundColor="bg-header-bg-secondary-light"
             lightBorderColor="border-header-title1-text-light"

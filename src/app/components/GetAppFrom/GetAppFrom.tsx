@@ -6,7 +6,7 @@ import GooglePlayStore from "@public/assets/Images/Common/google-play-store.svg"
 
 export default function GetAppFrom() {
   return (
-    <div className="flex w-fit flex-col gap-5 lg:flex-row lg:gap-8">
+    <>
       <Link
         href={"https://play.google.com/store/"}
         passHref
@@ -37,6 +37,6 @@ export default function GetAppFrom() {
           </span>
         </div>
       </Link>
-    </div>
+    </>
   );
 }
