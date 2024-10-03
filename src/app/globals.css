@@ -3,11 +3,201 @@
 @tailwind utilities;
 
 
+/* globals.css */
+
+/* Regular weights */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    /* Thin */
+    src: url('/assets/Fonts/Poppins/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 200;
+    /* ExtraLight */
+    src: url('/assets/Fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    /* Light */
+    src: url('/assets/Fonts/Poppins/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    /* Regular */
+    src: url('/assets/Fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    /* Medium */
+    src: url('/assets/Fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    /* SemiBold */
+    src: url('/assets/Fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    /* Bold */
+    src: url('/assets/Fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    /* ExtraBold */
+    src: url('/assets/Fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    /* Black */
+    src: url('/assets/Fonts/Poppins/Poppins-Black.ttf') format('truetype');
+}
+
+/* Italic weights */
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 100;
+    /* Thin Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-ThinItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 200;
+    /* ExtraLight Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 300;
+    /* Light Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    /* Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 500;
+    /* Medium Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 600;
+    /* SemiBold Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 700;
+    /* Bold Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 800;
+    /* ExtraBold Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 900;
+    /* Black Italic */
+    src: url('/assets/Fonts/Poppins/Poppins-BlackItalic.ttf') format('truetype');
+}
+
+/* Set the global font family */
+html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    @apply bg-header-bg-primary-light;
+    /* Tailwind classes for background and shadow */
+}
+
+.footer {
+    @apply bg-footer-bg-primary-light text-footer-title1-text-light;
+    /* Tailwind utilities for background and shadow */
+}
+
 /* Custom Global Classes */
 .text-error {
     @apply font-extrabold text-primary-pink-500;
 }
 
 .text-info {
-    @apply  text-body-title1-text-light;
+    @apply text-body-title1-text-light;
+}
+
+.text-hero {
+    @apply text-center text-7xl font-semibold leading-none;
+}
+
+.text-section-title {
+    @apply text-center text-6xl font-semibold leading-none;
+}
+
+.text-description {
+    @apply text-center text-xl font-light;
+}
+
+
+.card-shadow-drop-down-effect {
+    @apply border border-gray-100 shadow-lg hover:border-gray-200 hover:shadow-inner-custom;
+}
+
+.shape-decoration-round-left {
+    @apply absolute -left-40 h-80 w-80 rounded-full border-[50px] border-primary-pink-500;
+}
+
+.shape-decoration-round-bottom-right {
+    @apply absolute -right-40 bottom-0 h-80 w-80 rounded-full border-[50px] border-primary-pink-500;
 }

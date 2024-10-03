@@ -1,4 +1,3 @@
-// import Image from "next/image";
 import MockUp1 from "@public/assets/Images/Common/mock-up1.svg";
 import MockUp2 from "@public/assets/Images/Common/mock-up2.svg";
 import MockUp3 from "@public/assets/Images/Common/mock-up3.svg";
@@ -10,11 +9,11 @@ import LinkedIn from "@public/assets/Icons/Media/linkedin.svg";
 import IconEnvelope from "@public/assets/Icons/Common/Icon-Envelope.svg";
 
 import Link from "next/link";
-import Image from "next/image";
 import CustomButton from "./components/CustomButton/CustomButton";
 import { FAQ, Testimonial } from "./interfaces";
-import FAQItem from "./components/FAQCard/FAQCard";
 import GetAppFrom from "./components/GetAppFrom/GetAppFrom";
+import FAQCard from "./components/FAQCard/FAQCard";
+import TestimonialCard from "./components/TestimonialCard/TestimonialCard";
 export default function Home() {
   const testimonials: Testimonial[] = [
     {
@@ -77,7 +76,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative flex flex-col gap-20">
+    <div className="relative flex w-full flex-col items-center gap-20 overflow-hidden py-20">
       <div className="absolute top-0 h-[800px] w-full bg-primary-pink-500">
         <div className="absolute bottom-0 z-20 flex flex-col gap-5 p-10">
           <Link
@@ -98,42 +97,42 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="z-10 flex  flex-col gap-10 pt-14 text-body-bg-primary-light">
-        <h1 className="text-center text-7xl font-semibold leading-none">
+      <section
+        id="home"
+        className="z-10 flex flex-col items-center gap-10 text-body-bg-primary-light"
+      >
+        <h1 className="text-hero">
           The Future of Online
           <br />
           Services in Algeria.
         </h1>
 
-        <h2 className="text-center text-xl font-thin">
+        <h2 className="text-description">
           First remote digital services provider in Algeria, with
           <br />
           <span className="font-semibold">top 10%</span> of digital services
           providers all in <span className="font-semibold">one place.</span>
         </h2>
-      </div>
 
-      <div className="z-10 flex w-full items-center justify-center gap-16">
-        <MockUp1 className="hidden lg:block" />
-        <MockUp2 className="block" />
-        <MockUp3 className="hidden lg:block" />
-      </div>
+        <div className="z-10 flex w-full flex-row items-center justify-center gap-16">
+          <MockUp1 className="hidden lg:block" />
+          <MockUp2 className="block" />
+          <MockUp3 className="hidden lg:block" />
+        </div>
 
-      <div className="mx-auto">
         <GetAppFrom />
-      </div>
+      </section>
 
-      <h1 className="text-center text-6xl font-semibold leading-none">
+      <h1 id="about" className="text-section-title">
         ABOUT US
       </h1>
-
-      <div className=" w-[70%] mx-auto">
-        <div className="flex  relative flex-row justify-center ">
-          <div className=" flex-grow flex-shrink-0 flex flex-row justify-end pr-60">
+      <section className="px-[15%]">
+        <div className="flex flex-row justify-center">
+          <div className="flex flex-shrink-0 flex-grow flex-row justify-end pr-60">
             <MockUp1 />
           </div>
-          <div className="flex  w-[50%] flex-col justify-evenly">
-            <h2 className="text-4xl  font-semibold">
+          <div className="flex w-[50%] flex-col justify-evenly">
+            <h2 className="text-4xl font-semibold">
               Digital Services provider
             </h2>
             <div className="flex flex-col gap-5 text-xl">
@@ -180,61 +179,45 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="relative gap-6  flex flex-col  justify-center">
-        <div className=" -left-40 absolute w-80 h-80  border-[50px] border-primary-pink-500 rounded-full"></div>
-        <h1 className="text-center text-6xl font-semibold leading-none">
-          TESTIMONIALS
-        </h1>
-        <h2 className="text-center text-xl font-thin">
+      <div
+        id="testimonials"
+        className="relative flex w-full flex-col justify-center gap-6"
+      >
+        <span className="shape-decoration-round-left" />
+        <h1 className="text-section-title">TESTIMONIALS</h1>
+        <h2 className="text-description">
           Using <span className="font-semibold">Buzz</span> enables you to
           accomplish your digital needs from <br /> the comfort of your home.
         </h2>
       </div>
 
-      <div className=" w-[70%] mx-auto">
-        <div className="grid grid-cols-2  gap-20 ">
-          {testimonials.map(({ id, content, imageUrl, name, role }) => (
-            <div
-              key={id}
-              className="shadow-lg border border-gray-100 hover:shadow-inner-custom hover:border-gray-200 flex flex-col gap-8 pt-10 pb-10 px-10"
-            >
-              <p className="text-xl flex-grow">{content}</p>
-              <div className="flex flex-row items-center gap-4">
-                <div className="relative rounded-full overflow-clip w-12 h-12">
-                  <Image
-                    src={imageUrl}
-                    alt={`${name} image`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 48px, (max-width: 768px) 64px, 96px"
-                  />
-                </div>
-                <div>
-                  <h2 className="font-bold leading-tight">{name}</h2>
-                  <h3 className="text-sm leading-tight">{role}</h3>
-                </div>
-              </div>
-            </div>
+      <section className="px-[15%]">
+        <div className="grid grid-cols-2 gap-20">
+          {testimonials.map((testimonialData) => (
+            <TestimonialCard
+              key={testimonialData.id}
+              testimonialData={testimonialData}
+            />
           ))}
         </div>
-      </div>
+      </section>
 
-      <h1 className="text-center text-6xl font-semibold leading-none">FAQ’s</h1>
+      <h1 id="faq" className="text-section-title">
+        FAQ’s
+      </h1>
 
-      <div className="relative">
-        <div className="  w-[70%] mx-auto px-[10%] flex flex-col gap-10">
-          {faqs.map((item) => (
-            <FAQItem key={item.id} item={item} />
-          ))}
-          <div className=" -right-40 bottom-0  absolute w-80 h-80  border-[50px] border-primary-pink-500 rounded-full"></div>
-        </div>
-      </div>
+      <section className="relative flex flex-col gap-10 px-[25%]">
+        {faqs.map((faqData) => (
+          <FAQCard key={faqData.id} faqData={faqData} />
+        ))}
+        <span className="shape-decoration-round-bottom-right" />
+      </section>
 
-      <div className=" w-[70%]  relative mx-auto px-[5%]">
+      <section className="px-[20%]">
         <div className="flex flex-row">
-          <div className="flex  w-[50%] flex-col justify-evenly">
+          <div className="flex w-[50%] flex-col justify-evenly">
             <h2 className="text-6xl font-semibold leading-none">
               Download <br /> the app
             </h2>
@@ -245,15 +228,15 @@ export default function Home() {
 
             <GetAppFrom />
           </div>
-          <div className=" flex-shrink-0 flex-grow flex flex-row   justify-end ">
+          <div className="flex flex-shrink-0 flex-grow flex-row justify-end">
             <MockUp4 />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className=" w-[70%] mx-auto px-[5%] pb-20">
-        <div className="bg-primary-pink-500 py-10 px-20 flex flex-col gap-8 rounded-2xl text-white">
-          <h2 className="font-bold text-4xl">
+      <section id="contact" className="px-[20%]">
+        <div className="flex flex-col gap-8 rounded-2xl bg-primary-pink-500 px-20 py-10 text-white">
+          <h2 className="text-4xl font-bold">
             Subscribe to our newsletter to get updated
           </h2>
           <p className="text-xl">
@@ -263,21 +246,17 @@ export default function Home() {
           </p>
           <div className="flex flex-row justify-between gap-8">
             <div className="relative flex-grow">
-              <input
-                type="email"
-                id="email"
-                className="pl-14 bg-primary-pink-500 border-2 border-white  w-full h-full focus:outline-none focus:border-primary-pink-100 focus:ring-1 focus:ring-primary-pink-100 rounded-lg placeholder-white"
-                placeholder="Your email adresse"
-                required
-                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-              />
-              <span className="absolute inset-y-0 left-0  my-auto flex items-center pl-3">
-                <IconEnvelope />
-              </span>
-
-              {/* <span className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500">
-                <i className="fas fa-envelope"></i>
-              </span> */}
+              <div className="flex h-full flex-row items-center gap-6 rounded-lg border-2 border-white bg-primary-pink-500 p-4 focus-within:border-primary-pink-100 focus-within:ring-1 focus-within:ring-primary-pink-100">
+                <IconEnvelope className="w-8 fill-white" />
+                <input
+                  type="email"
+                  id="email"
+                  className="h-full flex-grow rounded-r-lg bg-transparent pb-1 placeholder-white focus:outline-none"
+                  placeholder="Your email address"
+                  required
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                />
+              </div>
             </div>
 
             <CustomButton
@@ -299,7 +278,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

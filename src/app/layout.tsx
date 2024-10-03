@@ -1,19 +1,7 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./sections/Header/Header";
 import Footer from "./sections/Footer/Footer";
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
 
 export const metadata: Metadata = {
   title: "Buzz",
@@ -26,14 +14,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Header /> {/* Header with TopNavbar */}
-        <main className="relative min-h-screen">
-          {/* Add padding to avoid overlap with navbar */}
-          {children}
-        </main>
-        <Footer /> {/* Footer at the bottom */}
+    <html lang="en" className="h-full">
+      <body className="mx-auto flex h-full w-full max-w-[1920px] flex-col">
+        <header className="header w-full">
+          <Header />
+        </header>
+        <main className="w-full">{children}</main>
+        <footer className="footer w-full">
+          <Footer />
+        </footer>
       </body>
     </html>
   );

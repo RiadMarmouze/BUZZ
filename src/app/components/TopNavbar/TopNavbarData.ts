@@ -3,11 +3,10 @@ export interface NavItem {
   title: string;
   href: string;
 }
-
 export const navItems: NavItem[] = [
-  { title: 'Home', href: '/home' },
-  { title: 'About', href: '/about' },
-  { title: 'Testimonials', href: '/testimonials' },
-  { title: 'Contact', href: '/contact' },
+  { title: "Home", href: "#home" },
+  { title: "About", href: "#about" },
+  { title: "Testimonials", href: "#testimonials" },
+  { title: "FAQ", href: "#faq" },
+  { title: "Contact", href: "#contact" },
 ];
-

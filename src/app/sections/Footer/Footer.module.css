@@ -1,9 +1,4 @@
 /* app/components/Footer.module.css */
-.footer {
-    @apply bg-footer-bg-primary-light text-footer-title1-text-light;
-    /* Tailwind utilities for background and shadow */
-}
-
 .footerLink {
     @apply mx-2.5 text-footer-title1-text-light transition-colors duration-200 hover:text-gray-500;
 }
