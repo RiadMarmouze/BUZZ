@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import styles from "./TopNavbar.module.css";
 import { NavItem, navItems } from "./TopNavbarData";
