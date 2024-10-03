@@ -275,7 +275,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="px-5 lg:px-[20%]">
+      <section id="contact" className="px-5 lg:px-[5%]">
         <div className="flex flex-col gap-8 rounded-2xl bg-primary-pink-500 px-5 py-10 text-white lg:px-20">
           <h2 className="text-section-subtitle">
             Subscribe to our newsletter to get updated
