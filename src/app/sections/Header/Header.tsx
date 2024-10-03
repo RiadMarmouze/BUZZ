@@ -8,21 +8,21 @@ import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
-    <div className="px-10 pt-14">
-      <div className="flex items-center justify-between border-b border-header-bg-secondary-light pb-4">
+    <div className="px-10 pt-5 lg:pt-14">
+      <div className="flex flex-col-reverse items-center justify-between lg:flex-row lg:border-b lg:border-header-bg-secondary-light lg:pb-5">
         {/* Logo */}
 
         <TopNavbar />
 
         <Link href="/" passHref>
           <div className="relative flex items-center gap-4">
-            <LogoIcon className="h-16 fill-header-bg-secondary-light" />
-            <LogoText className="h-10 fill-header-bg-secondary-light" />
+            <LogoIcon className="lg:h-18 h-12 fill-header-bg-secondary-light" />
+            <LogoText className="h-6 fill-header-bg-secondary-light lg:h-10" />
           </div>
         </Link>
 
         {/* Sign In Button */}
-        <div className="flex gap-4">
+        <div className="hidden lg:flex lg:gap-4">
           <CustomButton
             text="LOG IN"
             variant="filled"

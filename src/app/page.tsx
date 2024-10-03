@@ -76,9 +76,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative flex w-full flex-col items-center gap-20 overflow-hidden py-20">
-      <div className="absolute top-0 h-[800px] w-full bg-primary-pink-500">
-        <div className="absolute bottom-0 z-20 flex flex-col gap-5 p-10">
+    <div className="relative flex w-full flex-col items-center gap-10 overflow-hidden py-8 lg:gap-20 lg:py-20">
+      <div className="absolute top-0 -z-10 h-[500px] w-full bg-primary-pink-500 lg:h-[800px]">
+        <div className="flex h-full flex-col justify-end gap-5 p-3 lg:p-10">
           <Link
             href="https://www.facebook.com/share/ZjsHnDd8kC6fD99v/?mibextid=qi2Omg"
             passHref
@@ -99,43 +99,82 @@ export default function Home() {
 
       <section
         id="home"
-        className="z-10 flex flex-col items-center gap-10 text-body-bg-primary-light"
+        className="flex flex-col items-center gap-8 text-body-bg-primary-light lg:gap-10"
       >
-        <h1 className="text-hero">
+        <h1 className="text-hero text-center">
           The Future of Online
           <br />
           Services in Algeria.
         </h1>
 
-        <h2 className="text-description">
+        <h2 className="text-description text-center">
           First remote digital services provider in Algeria, with
           <br />
           <span className="font-semibold">top 10%</span> of digital services
           providers all in <span className="font-semibold">one place.</span>
         </h2>
 
-        <div className="z-10 flex w-full flex-row items-center justify-center gap-16">
-          <MockUp1 className="hidden lg:block" />
-          <MockUp2 className="block" />
-          <MockUp3 className="hidden lg:block" />
+        <div className="flex gap-4 lg:hidden">
+          <CustomButton
+            text="LOG IN"
+            variant="filled"
+            theme="light"
+            padding="py-2 px-4"
+            textSize="text-xs"
+            colorTextLight="text-white"
+            lightBackgroundColor="bg-primary-pink-700"
+            lightBorderHoverColor="hover:border-primary-pink-500"
+            colorTextLightHover="hover:text-gray-200"
+            lightBackgroundHoverColor="hover:bg-primary-pink-600"
+            lightBorderColor="border-primary-pink-500"
+            colorTextDark="text-white"
+            darkBackgroundColor="bg-primary-pink-800"
+            darkBorderColor="border-primary-pink-800"
+            colorTextDarkHover="hover:text-gray-400"
+            darkBackgroundHoverColor="hover:bg-primary-pink-900"
+            darkBorderHoverColor="hover:border-primary-pink-900"
+          />
+          <CustomButton
+            text="SIGN UP"
+            variant="filled"
+            theme="light"
+            padding="py-2 px-4"
+            textSize="text-xs"
+            colorTextLight="text-header-bg-primary-light"
+            lightBackgroundColor="bg-header-bg-secondary-light"
+            lightBorderColor="border-header-title1-text-light"
+            colorTextLightHover="hover:text-primary-pink-700"
+            lightBackgroundHoverColor="hover:bg-primary-pink-100"
+            lightBorderHoverColor="hover:border-primary-pink-500"
+            colorTextDark="text-white"
+            darkBackgroundColor="bg-primary-pink-800"
+            darkBorderColor="border-primary-pink-800"
+            colorTextDarkHover="hover:text-gray-400"
+            darkBackgroundHoverColor="hover:bg-primary-pink-900"
+            darkBorderHoverColor="hover:border-primary-pink-900"
+          />
+        </div>
+
+        <div className="relative flex w-[70%] flex-row items-center justify-center gap-16 lg:w-full">
+          <MockUp1 className="hidden w-[250px] lg:block" />
+          <MockUp2 className="block w-full shrink-0 lg:w-[350px]" />
+          <MockUp3 className="hidden w-[250px] lg:block" />
         </div>
 
         <GetAppFrom />
       </section>
 
-      <h1 id="about" className="text-section-title">
+      <h1 id="about" className="text-section-title text-center">
         ABOUT US
       </h1>
-      <section className="px-[15%]">
-        <div className="flex flex-row justify-center">
-          <div className="flex flex-shrink-0 flex-grow flex-row justify-end pr-60">
-            <MockUp1 />
+      <section className="px-5 lg:px-[15%]">
+        <div className="flex flex-grow flex-row justify-center gap-5 lg:gap-0">
+          <div className="flex flex-shrink-0 flex-row items-center justify-center lg:w-[50%]">
+            <MockUp3 className="w-[100px] lg:w-[350px]" />
           </div>
-          <div className="flex w-[50%] flex-col justify-evenly">
-            <h2 className="text-4xl font-semibold">
-              Digital Services provider
-            </h2>
-            <div className="flex flex-col gap-5 text-xl">
+          <div className="flex w-full flex-col justify-evenly gap-2 lg:w-[50%] lg:gap-0">
+            <h2 className="text-section-subtitle">Digital Services provider</h2>
+            <div className="text-description flex flex-col gap-2 lg:gap-5">
               <p>
                 <span className="font-semibold">Buzz</span> is a service based{" "}
                 <span className="font-semibold">app</span>, that provide digital
@@ -159,9 +198,9 @@ export default function Home() {
               <CustomButton
                 text="Learn more"
                 variant="filled"
-                padding="px-4 py-2"
-                fontWeight="font-normal"
-                textSize="text-base"
+                padding="px-2 py-2 lg:px-4 lg:py-2"
+                fontWeight="font-bold"
+                textSize="text-[10px] lg:text-base"
                 theme="light"
                 colorTextLight="text-white"
                 lightBackgroundColor="bg-primary-pink-500"
@@ -183,75 +222,77 @@ export default function Home() {
 
       <div
         id="testimonials"
-        className="relative flex w-full flex-col justify-center gap-6"
+        className="relative flex w-full flex-col items-center justify-center gap-6"
       >
-        <span className="shape-decoration-round-left" />
-        <h1 className="text-section-title">TESTIMONIALS</h1>
-        <h2 className="text-description">
+        <h1 className="text-section-title text-center">TESTIMONIALS</h1>
+        <h2 className="text-description max-w-xs px-5 text-center lg:max-w-xl">
           Using <span className="font-semibold">Buzz</span> enables you to
-          accomplish your digital needs from <br /> the comfort of your home.
+          accomplish your digital needs from the comfort of your home.
         </h2>
+        <span className="shape-decoration-round-left -z-10" />
       </div>
 
-      <section className="px-[15%]">
-        <div className="grid grid-cols-2 gap-20">
+      <section className="lg:px-[15%]">
+        <div className="flex w-screen flex-row overflow-x-auto lg:grid lg:w-full lg:grid-cols-2 lg:gap-20 lg:overflow-clip">
           {testimonials.map((testimonialData) => (
-            <TestimonialCard
+            <div
               key={testimonialData.id}
-              testimonialData={testimonialData}
-            />
+              className="m-5 w-[calc(100vw-40px)] flex-shrink-0 lg:m-0 lg:w-full"
+            >
+              <TestimonialCard testimonialData={testimonialData} />
+            </div>
           ))}
         </div>
       </section>
 
-      <h1 id="faq" className="text-section-title">
+      <h1 id="faq" className="text-section-title text-center">
         FAQ’s
       </h1>
 
-      <section className="relative flex flex-col gap-10 px-[25%]">
+      <section className="relative flex flex-col gap-5 px-5 lg:gap-10 lg:px-[25%]">
         {faqs.map((faqData) => (
           <FAQCard key={faqData.id} faqData={faqData} />
         ))}
-        <span className="shape-decoration-round-bottom-right" />
+        <span className="shape-decoration-round-bottom-right -z-10" />
       </section>
 
-      <section className="px-[20%]">
-        <div className="flex flex-row">
-          <div className="flex w-[50%] flex-col justify-evenly">
-            <h2 className="text-6xl font-semibold leading-none">
+      <section className="px-5 lg:px-[15%]">
+        <div className="flex flex-row gap-10 lg:gap-40">
+          <div className="flex flex-grow flex-col justify-evenly">
+            <h2 className="text-section-title">
               Download <br /> the app
             </h2>
-            <p className="text-xl">
+            <p className="text-description">
               Our app is available both on the play store and the app store,
               latest update is here.
             </p>
 
             <GetAppFrom />
           </div>
-          <div className="flex flex-shrink-0 flex-grow flex-row justify-end">
-            <MockUp4 />
+          <div className="flex flex-shrink flex-row justify-end">
+            <MockUp4 className="w-[150px] lg:w-[350px]" />
           </div>
         </div>
       </section>
 
-      <section id="contact" className="px-[20%]">
-        <div className="flex flex-col gap-8 rounded-2xl bg-primary-pink-500 px-20 py-10 text-white">
-          <h2 className="text-4xl font-bold">
+      <section id="contact" className="px-5 lg:px-[20%]">
+        <div className="flex flex-col gap-8 rounded-2xl bg-primary-pink-500 px-5 py-10 text-white lg:px-20">
+          <h2 className="text-section-subtitle">
             Subscribe to our newsletter to get updated
           </h2>
-          <p className="text-xl">
+          <p className="text-description">
             We write weekly personalized newsletters in which we share our
             updates and the lessons we learned from making and maitaining our
             app.
           </p>
-          <div className="flex flex-row justify-between gap-8">
+          <div className="flex flex-col gap-5 lg:flex-row lg:gap-8">
             <div className="relative flex-grow">
-              <div className="flex h-full flex-row items-center gap-6 rounded-lg border-2 border-white bg-primary-pink-500 p-4 focus-within:border-primary-pink-100 focus-within:ring-1 focus-within:ring-primary-pink-100">
-                <IconEnvelope className="w-8 fill-white" />
+              <div className="flex h-full flex-row items-center gap-4 rounded-lg border-2 border-white bg-primary-pink-500 p-2 focus-within:border-primary-pink-100 focus-within:ring-1 focus-within:ring-primary-pink-100 lg:gap-6 lg:p-4">
+                <IconEnvelope className="w-6 fill-white lg:w-8" />
                 <input
                   type="email"
                   id="email"
-                  className="h-full flex-grow rounded-r-lg bg-transparent pb-1 placeholder-white focus:outline-none"
+                  className="h-full flex-grow rounded-r-lg bg-transparent pb-0 text-xs placeholder-white focus:outline-none lg:pb-1 lg:text-base"
                   placeholder="Your email address"
                   required
                   pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
@@ -263,6 +304,8 @@ export default function Home() {
               text="Get Started"
               variant="filled"
               theme="light"
+              padding="px-10 py-4"
+              textSize="text-sm lg:text-base"
               colorTextLight="text-header-bg-primary-light"
               lightBackgroundColor="bg-header-bg-secondary-light"
               lightBorderColor="border-header-title1-text-light"

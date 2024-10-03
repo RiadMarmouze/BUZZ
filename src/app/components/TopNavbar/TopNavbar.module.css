@@ -3,13 +3,13 @@
 }
 
 .activeLink {
-    @apply font-semibold text-header-bg-secondary-light;
+    @apply font-bold text-header-bg-secondary-light;
     /* Tailwind utility for active state */
 }
 
 /* If you want to add specific styles for hover or focus, you can do that as well */
 .link {
-    @apply transition-colors duration-500;
+    @apply text-xs transition-colors duration-500 lg:text-base;
 }
 
 .link:hover {

@@ -12,13 +12,15 @@ const TopNavbar: React.FC = () => {
   const pathname = usePathname();
   return (
     <nav className={`${styles.navbar}`}>
-      <ul className="flex justify-center space-x-8">
+      <ul className="mt-5 flex justify-center space-x-8 border-t border-header-bg-secondary-light pt-2 lg:mt-0 lg:border-none lg:pt-0">
         {navItems.map((item) => (
-          <NavItemLink
-            key={item.href}
-            item={item}
-            isActive={isActiveLink(pathname, item.href)}
-          />
+          <div key={item.href} className="felx flex-col">
+            <NavItemLink
+              
+              item={item}
+              isActive={isActiveLink(pathname, item.href)}
+            />
+          </div>
         ))}
       </ul>
     </nav>
@@ -32,12 +34,7 @@ const NavItemLink: React.FC<{ item: NavItem; isActive: boolean }> = ({
 }) => {
   return (
     <li>
-      <a
-        href={item.href}
-        className={`${styles.link} scroll-link ${
-          isActive ? styles.activeLink : ""
-        }`}
-      >
+      <a href={item.href} className={`${styles.link} scroll-link `}>
         {item.title}
       </a>
     </li>

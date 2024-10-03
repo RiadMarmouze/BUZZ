@@ -1,4 +1,4 @@
 /* app/components/Footer.module.css */
 .footerLink {
-    @apply mx-2.5 text-footer-title1-text-light transition-colors duration-200 hover:text-gray-500;
+    @apply mx-2.5 text-xs text-footer-title1-text-light transition-colors duration-200 hover:text-gray-500 lg:text-base;
 }

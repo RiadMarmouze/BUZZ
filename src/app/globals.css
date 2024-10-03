@@ -178,15 +178,19 @@ html {
 }
 
 .text-hero {
-    @apply text-center text-7xl font-semibold leading-none;
+    @apply text-3xl font-semibold leading-none lg:text-7xl;
 }
 
 .text-section-title {
-    @apply text-center text-6xl font-semibold leading-none;
+    @apply  text-3xl font-semibold leading-none lg:text-6xl;
+}
+
+.text-section-subtitle {
+    @apply text-xl font-semibold leading-none lg:text-4xl;
 }
 
 .text-description {
-    @apply text-center text-xl font-light;
+    @apply text-xs font-light lg:text-xl;
 }
 
 
@@ -195,9 +199,9 @@ html {
 }
 
 .shape-decoration-round-left {
-    @apply absolute -left-40 h-80 w-80 rounded-full border-[50px] border-primary-pink-500;
+    @apply absolute -left-28 h-40 w-40 lg:-left-40 lg:h-80 lg:w-80 rounded-full border-[25px] lg:border-[50px] border-primary-pink-500;
 }
 
 .shape-decoration-round-bottom-right {
-    @apply absolute -right-40 bottom-0 h-80 w-80 rounded-full border-[50px] border-primary-pink-500;
+    @apply absolute  -right-28 bottom-0 h-40 w-40 lg:-right-40 lg:h-80 lg:w-80 rounded-full border-[25px] lg:border-[50px] border-primary-pink-500;
 }
