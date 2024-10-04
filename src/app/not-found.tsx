@@ -9,7 +9,7 @@ export default function NotFoundPage() {
       <div className="w-full max-w-3xl">
         <div className="flex flex-col items-center justify-center space-y-6">
           {/* SVG Image */}
-          <div className="h-auto w-full max-w-xs">
+          <div className="flex h-auto w-full max-w-xs justify-center">
             <Image
               src="/assets/Images/Common/404.svg" // Place your SVG file in the public folder
               alt="404 Not Found"

@@ -47,7 +47,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   darkBorderHoverColor = "hover:border-blue-800",
   theme = "light",
 }) => {
-  const baseClasses = `${padding} ${fontWeight} ${textSize} ${raduis} text-nowrap  focus:outline-none transition-all`;
+  const baseClasses = `${padding} ${fontWeight} ${textSize} ${raduis} text-nowrap leading-none  focus:outline-none transition-all`;
 
   // Conditionally generate classes based on theme, variant, and color props
   const buttonClasses = classNames(baseClasses, {

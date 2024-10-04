@@ -19,7 +19,7 @@ const TopNavbar: React.FC = () => {
 // Separate component for each navigation link
 const NavItemLink: React.FC<{ item: NavItem }> = ({ item }) => {
   return (
-    <a href={item.href} className={`${styles.link} scroll-link  text-nowrap`}>
+    <a href={item.href} className={`${styles.link} scroll-link leading-none text-nowrap`}>
       {item.title}
     </a>
   );

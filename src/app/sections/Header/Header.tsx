@@ -8,22 +8,22 @@ import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
-    <div className="flex justify-center px-5 pt-5 lg:px-10 lg:pt-14">
+    <div className="relative flex justify-center px-5 pt-5 lg:px-10 lg:pt-14">
       <Link href="/" passHref className="absolute hidden lg:block">
-        <div className="flex items-center gap-4">
+        <div className="flex h-full items-center gap-4">
           <LogoIcon className="h-16 fill-header-bg-secondary-light" />
           <LogoText className="h-12 fill-header-bg-secondary-light" />
         </div>
       </Link>
-      <div className="flex w-full flex-col-reverse items-center justify-between lg:flex-row lg:border-b lg:border-header-bg-secondary-light lg:pb-5">
+      <div className="flex w-full flex-col-reverse items-center justify-between pb-2 lg:h-24 lg:flex-row lg:border-b lg:border-header-bg-secondary-light lg:pb-8">
         {/* Logo */}
 
         <TopNavbar />
 
         <Link href="/" passHref className="block lg:hidden">
           <div className="flex items-center gap-4">
-            <LogoIcon className="h-12 fill-header-bg-secondary-light" />
-            <LogoText className="h-8 fill-header-bg-secondary-light" />
+            <LogoIcon className="h-12 fill-header-bg-secondary-light lg:h-16" />
+            <LogoText className="h-8 fill-header-bg-secondary-light lg:h-12" />
           </div>
         </Link>
 
