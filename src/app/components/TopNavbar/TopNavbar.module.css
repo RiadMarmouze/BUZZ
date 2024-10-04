@@ -1,5 +1,5 @@
 .navbar {
-    @apply text-primary-pink-100;
+    @apply w-full text-primary-pink-100 lg:w-fit;
 }
 
 .activeLink {

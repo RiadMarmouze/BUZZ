@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Header: React.FC = () => {
   return (
-    <div className="flex justify-center px-10 pt-5 lg:pt-14">
+    <div className="flex justify-center px-5 pt-5 lg:px-10 lg:pt-14">
       <Link href="/" passHref className="absolute hidden lg:block">
         <div className="flex items-center gap-4">
           <LogoIcon className="h-16 fill-header-bg-secondary-light" />

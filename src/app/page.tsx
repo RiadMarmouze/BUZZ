@@ -119,10 +119,9 @@ export default function Home() {
           Services in Algeria.
         </h1>
 
-        <h2 className="text-description text-center">
-          First remote digital services provider in Algeria, with
-          <br />
-          <span className="font-semibold">top 10%</span> of digital services
+        <h2 className="text-description max-w-[90%] text-center lg:max-w-lg">
+          First remote digital services provider in Algeria, with{" "}
+          <span className="font-semibold">top 10%</span> of digital service
           providers all in <span className="font-semibold">one place.</span>
         </h2>
 
@@ -175,7 +174,7 @@ export default function Home() {
           <MockUp3 className="hidden w-[250px] lg:block" />
         </div>
 
-        <div className="flex w-fit flex-row gap-8">
+        <div className="flex w-full gap-8 px-5 lg:w-fit lg:px-0">
           <GetAppFrom />
         </div>
       </section>

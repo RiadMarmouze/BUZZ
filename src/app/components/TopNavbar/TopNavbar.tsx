@@ -5,11 +5,11 @@ import { NavItem, navItems } from "./TopNavbarData";
 const TopNavbar: React.FC = () => {
   return (
     <nav className={`${styles.navbar}`}>
-      <ul className="mt-5 flex justify-center space-x-8 border-t border-header-bg-secondary-light pt-2 lg:mt-0 lg:border-none lg:pt-0">
+      <ul className="mt-5 flex w-full justify-between gap-0 border-t border-header-bg-secondary-light pt-2 lg:mt-0 lg:gap-10 lg:border-none lg:pt-0">
         {navItems.map((item) => (
-          <div key={item.href} className="felx flex-col">
+          <li key={item.href} >
             <NavItemLink item={item} />
-          </div>
+          </li>
         ))}
       </ul>
     </nav>
@@ -19,11 +19,9 @@ const TopNavbar: React.FC = () => {
 // Separate component for each navigation link
 const NavItemLink: React.FC<{ item: NavItem }> = ({ item }) => {
   return (
-    <li>
-      <a href={item.href} className={`${styles.link} scroll-link `}>
-        {item.title}
-      </a>
-    </li>
+    <a href={item.href} className={`${styles.link} scroll-link  text-nowrap`}>
+      {item.title}
+    </a>
   );
 };
 
