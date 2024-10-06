@@ -10,14 +10,17 @@ export const checkIfEmailExists = async (email: string): Promise<boolean> => {
   return !querySnapshot.empty;
 };
 
-// Function to add an email to the "newsletter" collection
-import { doc, setDoc } from "firebase/firestore";
+
+import { doc, setDoc, serverTimestamp } from "firebase/firestore"; // Ensure you import serverTimestamp
 
 // Save email to the "newsletters" collection
 export const saveEmail = async (email: string) => {
-  // Use email as document ID, but you need to sanitize it to avoid issues
-  const emailRef = doc(db, "newsletters", email); // use the email as the document ID
+  // Sanitize email to use as document ID
+  const emailRef = doc(db, "newsletters", email);
 
-  // Set the email field in the document
-  await setDoc(emailRef, { email });
+  // Set the email and createdAt fields in the document
+  await setDoc(emailRef, {
+    email,
+    createdAt: serverTimestamp(), // Save the current timestamp
+  });
 };
