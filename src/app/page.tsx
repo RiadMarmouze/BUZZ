@@ -249,7 +249,7 @@ export default function Home() {
         <span className="shape-decoration-round-left -z-10" />
       </div>
 
-      <section className="w-screen overflow-x-auto lg:w-[70vw] lg:overflow-clip">
+      <section className="w-screen lg:w-[70vw] lg:overflow-clip">
         <div className="flex w-fit flex-row gap-5 p-5 max-sm:animate-scrollRight lg:grid lg:grid-cols-2 lg:gap-20">
           {testimonials.map((testimonialData) => (
             <div
@@ -274,10 +274,10 @@ export default function Home() {
       </section>
 
       <section className="px-5 lg:px-[15%]">
-        <div className="flex w-full flex-row gap-5 lg:gap-40">
-          <div className="flex flex-grow flex-col justify-evenly">
+        <div className="flex w-full flex-row gap-3 lg:gap-40">
+          <div className="flex flex-col justify-evenly gap-5 lg:gap-0">
             <h2 className="text-section-title">
-              Download <br /> the app
+              Download  <br/> the app
             </h2>
             <p className="text-description">
               Our app is available both on the play store and the app store,
@@ -288,8 +288,8 @@ export default function Home() {
               <GetAppFrom />
             </div>
           </div>
-          <div className="flex flex-shrink flex-row justify-end">
-            <MockUp5 className="w-[150px] lg:w-[350px]" />
+          <div className="flex flex-shrink-0 flex-row justify-end">
+            <MockUp5 className="w-[120px] lg:w-[350px]" />
           </div>
         </div>
       </section>
