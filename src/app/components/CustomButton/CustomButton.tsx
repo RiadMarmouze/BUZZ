@@ -24,6 +24,7 @@ interface ButtonProps {
   lightBorderHoverColor?: string;
   darkBorderHoverColor?: string;
   theme?: Theme;
+  disabled?: boolean;
 }
 
 const CustomButton: React.FC<ButtonProps> = ({
@@ -46,6 +47,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   lightBorderHoverColor = "hover:border-blue-600",
   darkBorderHoverColor = "hover:border-blue-800",
   theme = "light",
+  disabled = false
 }) => {
   const baseClasses = `${padding} ${fontWeight} ${textSize} ${raduis} text-nowrap leading-none  focus:outline-none transition-all`;
 
@@ -77,7 +79,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   });
 
   return (
-    <button className={buttonClasses} >
+    <button disabled={disabled} className={buttonClasses} >
       {text}
     </button>
   );

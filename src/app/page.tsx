@@ -7,7 +7,7 @@ import Facebook from "@public/assets/Icons/Media/facebook.svg";
 import Instagram from "@public/assets/Icons/Media/instagram.svg";
 import X from "@public/assets/Icons/Media/x.svg";
 import LinkedIn from "@public/assets/Icons/Media/linkedin.svg";
-import IconEnvelope from "@public/assets/Icons/Common/Icon-Envelope.svg";
+// import IconEnvelope from "@public/assets/Icons/Common/Icon-Envelope.svg";
 
 import Link from "next/link";
 import CustomButton from "./components/CustomButton/CustomButton";
@@ -15,6 +15,7 @@ import { FAQ, Testimonial } from "./interfaces";
 import GetAppFrom from "./components/GetAppFrom/GetAppFrom";
 import FAQCard from "./components/FAQCard/FAQCard";
 import TestimonialCard from "./components/TestimonialCard/TestimonialCard";
+import NewsletterForm from "./sections/NewsletterForm/NewsletterForm";
 export default function Home() {
   const testimonials: Testimonial[] = [
     {
@@ -248,12 +249,12 @@ export default function Home() {
         <span className="shape-decoration-round-left -z-10" />
       </div>
 
-      <section className="lg:px-[15%]">
-        <div className="flex w-screen flex-row overflow-x-auto lg:grid lg:w-full lg:grid-cols-2 lg:gap-20 lg:overflow-clip">
+      <section className="w-screen overflow-x-auto lg:w-[70vw] lg:overflow-clip">
+        <div className="flex w-fit flex-row gap-5 p-5 max-sm:animate-scrollRight lg:grid lg:grid-cols-2 lg:gap-20">
           {testimonials.map((testimonialData) => (
             <div
               key={testimonialData.id}
-              className="m-5 w-[calc(100vw-40px)] flex-shrink-0 lg:m-0 lg:w-full"
+              className="w-[calc(100vw-40px)] flex-shrink-0 lg:w-full"
             >
               <TestimonialCard testimonialData={testimonialData} />
             </div>
@@ -273,7 +274,7 @@ export default function Home() {
       </section>
 
       <section className="px-5 lg:px-[15%]">
-        <div className="flex w-full flex-row gap-10 lg:gap-40">
+        <div className="flex w-full flex-row gap-5 lg:gap-40">
           <div className="flex flex-grow flex-col justify-evenly">
             <h2 className="text-section-title">
               Download <br /> the app
@@ -294,7 +295,7 @@ export default function Home() {
       </section>
 
       <section id="contact" className="px-5 lg:px-[15%]">
-        <div className="flex flex-col gap-8 rounded-2xl bg-primary-pink-500 px-5 py-10 text-white lg:px-20">
+        <div className="flex flex-col gap-8 rounded-2xl bg-primary-pink-500 px-5 py-14 text-white lg:px-20">
           <h2 className="text-section-subtitle">
             Subscribe to our newsletter to get updated
           </h2>
@@ -303,42 +304,7 @@ export default function Home() {
             updates and the lessons we learned from making and maitaining our
             app.
           </p>
-          <div className="flex flex-col gap-5 lg:flex-row lg:gap-8">
-            <div className="relative flex-grow">
-              <div className="flex h-full flex-row items-center gap-4 rounded-lg border-2 border-white bg-primary-pink-500 p-2 focus-within:border-primary-pink-100 focus-within:ring-1 focus-within:ring-primary-pink-100 lg:gap-6 lg:p-4">
-                <IconEnvelope className="w-6 fill-white lg:w-8" />
-                <input
-                  type="email"
-                  id="email"
-                  className="h-full flex-grow rounded-r-lg bg-transparent pb-0 text-xs placeholder-white focus:outline-none lg:pb-1 lg:text-base"
-                  placeholder="Your email address"
-                  required
-                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-                />
-              </div>
-            </div>
-
-            <CustomButton
-              text="Get Started"
-              variant="filled"
-              theme="light"
-              padding="px-10 py-3 lg:py-4"
-              raduis="rounded-md lg:rounded-xl"
-              textSize="text-sm lg:text-base"
-              colorTextLight="text-header-bg-primary-light"
-              lightBackgroundColor="bg-header-bg-secondary-light"
-              lightBorderColor="border-header-title1-text-light"
-              colorTextLightHover="hover:text-primary-pink-700"
-              lightBackgroundHoverColor="hover:bg-primary-pink-100"
-              lightBorderHoverColor="hover:border-primary-pink-500"
-              colorTextDark="text-white"
-              darkBackgroundColor="bg-primary-pink-800"
-              darkBorderColor="border-primary-pink-800"
-              colorTextDarkHover="hover:text-gray-400"
-              darkBackgroundHoverColor="hover:bg-primary-pink-900"
-              darkBorderHoverColor="hover:border-primary-pink-900"
-            />
-          </div>
+          <NewsletterForm />
         </div>
       </section>
     </div>
