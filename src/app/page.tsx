@@ -7,7 +7,6 @@ import Facebook from "@public/assets/Icons/Media/facebook.svg";
 import Instagram from "@public/assets/Icons/Media/instagram.svg";
 import X from "@public/assets/Icons/Media/x.svg";
 import LinkedIn from "@public/assets/Icons/Media/linkedin.svg";
-// import IconEnvelope from "@public/assets/Icons/Common/Icon-Envelope.svg";
 
 import Link from "next/link";
 import CustomButton from "./components/CustomButton/CustomButton";
@@ -277,7 +276,7 @@ export default function Home() {
         <div className="flex w-full flex-row gap-3 lg:gap-40">
           <div className="flex flex-col justify-evenly gap-5 lg:gap-0">
             <h2 className="text-section-title">
-              Download  <br/> the app
+              Download <br /> the app
             </h2>
             <p className="text-description">
               Our app is available both on the play store and the app store,
