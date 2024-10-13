@@ -193,6 +193,13 @@ html {
     @apply text-xs font-light leading-tight lg:text-[28px] lg:leading-[41px];
 }
 
+.text-title{
+    @apply text-[20px] font-semibold leading-none lg:text-[43px] lg:leading-[41px];
+}
+
+.text-paragraph{
+    @apply text-xs lg:text-xl;
+}
 
 .card-shadow-drop-down-effect {
     @apply border border-gray-100 shadow-lg hover:border-gray-200 hover:shadow-inner-custom;

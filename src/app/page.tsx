@@ -303,10 +303,10 @@ export default function Home() {
 
       <section className="body-responsive-container">
         <div className="flex flex-col gap-8 rounded-2xl bg-primary-pink-500 px-5 py-14 text-white lg:px-20">
-          <h2 className="text-section-subtitle">
+          <h2 className="text-title">
             Subscribe to our newsletter to get updated
           </h2>
-          <p className="text-description">
+          <p className="text-paragraph">
             We write weekly personalized newsletters in which we share our
             updates and the lessons we learned from making and maitaining our
             app.
