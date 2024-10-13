@@ -79,10 +79,10 @@ export const paymentMethods: PaymentMethod[] = [
     name: "Discover",
     icon: "/assets/Images/Common/PaymentMethod/discover.png", // Replace with actual image path
   },
-  {
-    name: "UnionPay",
-    icon: "/assets/Images/Common/PaymentMethod/unionpay.png", // Replace with actual image path
-  },
+  // {
+  //   name: "UnionPay",
+  //   icon: "/assets/Images/Common/PaymentMethod/unionpay.png", // Replace with actual image path
+  // },
   {
     name: "CIB",
     icon: "/assets/Images/Common/PaymentMethod/cib.png", // Replace with actual image path

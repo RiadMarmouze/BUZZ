@@ -14,7 +14,7 @@ export default function GetAppFrom() {
       >
         <GooglePlayStore className="h-6 lg:h-12" />
         <div className="flex flex-col text-body-bg-primary-light">
-          <span className="text-[10px] font-thin leading-tight lg:text-base">
+          <span className="text-[10px] font-light leading-tight lg:text-base">
             GET IT ON
           </span>
           <span className="text-nowrap text-xs font-semibold leading-tight lg:text-2xl">
@@ -29,7 +29,7 @@ export default function GetAppFrom() {
       >
         <AppleAppStore className="h-6 lg:h-12" />
         <div className="flex flex-col text-body-bg-primary-light">
-          <span className="text-[10px] font-thin leading-tight lg:text-base">
+          <span className="text-[10px] font-light leading-tight lg:text-base">
             GET IT ON
           </span>
           <span className="text-nowrap text-xs font-semibold leading-tight lg:text-2xl">

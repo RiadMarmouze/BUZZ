@@ -168,29 +168,29 @@ html {
     /* Tailwind utilities for background and shadow */
 }
 
+.body-responsive-container {
+    @apply px-5 w-screen lg:w-[70vw] lg:px-0;
+}
+
 /* Custom Global Classes */
 .text-error {
-    @apply font-extrabold text-primary-pink-500;
+    @apply font-bold text-primary-pink-500;
 }
 
 .text-info {
     @apply text-body-title1-text-light;
 }
 
-.text-hero {
-    @apply text-3xl font-semibold leading-none lg:text-7xl;
-}
-
 .text-section-title {
-    @apply text-3xl font-semibold leading-none lg:text-6xl;
+    @apply text-3xl font-semibold leading-none lg:text-[82px] lg:leading-[88px];
 }
 
 .text-section-subtitle {
-    @apply text-xl font-semibold leading-none lg:text-4xl;
+    @apply text-[20px] font-semibold leading-none lg:text-[58px] lg:leading-[88px];
 }
 
 .text-description {
-    @apply text-xs font-light lg:text-xl;
+    @apply text-xs font-light leading-tight lg:text-[28px] lg:leading-[41px];
 }
 
 

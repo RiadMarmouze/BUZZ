@@ -109,23 +109,24 @@ export default function Home() {
         </ul>
       </div>
 
+      {/* home *********************************************************************************************/}
       <section
         id="home"
-        className="z-10 flex flex-col items-center gap-8 text-body-bg-primary-light lg:gap-10"
+        className="body-responsive-container flex flex-col items-center gap-8 text-body-bg-primary-light lg:gap-10"
       >
-        <h1 className="text-hero text-center">
+        <h1 className="text-section-title z-10 text-center">
           The Future of Online
           <br />
           Services in Algeria.
         </h1>
 
-        <h2 className="text-description max-w-[90%] text-center lg:max-w-lg">
+        <h2 className="text-description z-10 max-w-[90%] text-center lg:max-w-[55%]">
           First remote digital services provider in Algeria, with{" "}
           <span className="font-semibold">top 10%</span> of digital service
           providers all in <span className="font-semibold">one place.</span>
         </h2>
 
-        <div className="flex gap-4 lg:hidden">
+        <div className="z-10 flex gap-4 lg:hidden">
           <CustomButton
             text="LOG IN"
             variant="filled"
@@ -179,15 +180,16 @@ export default function Home() {
         </div>
       </section>
 
-      <h1 id="about" className="text-section-title text-center">
-        ABOUT US
-      </h1>
-      <section className="px-5 lg:px-[15%]">
+      <span id="about" />
+
+      {/* about *********************************************************************************************/}
+      <h1 className="text-section-title body-responsive-container text-center">About us</h1>
+      <section className="body-responsive-container">
         <div className="flex flex-grow flex-row justify-center gap-5 lg:gap-0">
-          <div className="flex flex-shrink-0 flex-row items-center justify-center lg:w-[50%]">
+          <div className="flex flex-shrink-0 flex-row items-center justify-center lg:w-[45%]">
             <MockUp4 className="w-[100px] lg:w-[350px]" />
           </div>
-          <div className="flex w-full flex-col justify-evenly gap-2 lg:w-[50%] lg:gap-0">
+          <div className="flex w-full flex-col justify-evenly gap-2 lg:w-[55%] lg:gap-0">
             <h2 className="text-section-subtitle">Digital Services provider</h2>
             <div className="text-description flex flex-col gap-2 lg:gap-5">
               <p>
@@ -236,19 +238,18 @@ export default function Home() {
         </div>
       </section>
 
-      <div
-        id="testimonials"
-        className="relative flex w-full flex-col items-center justify-center gap-6"
-      >
-        <h1 className="text-section-title text-center">TESTIMONIALS</h1>
-        <h2 className="text-description max-w-xs px-5 text-center lg:max-w-xl">
+      {/* testimonials *********************************************************************************************/}
+      <span id="testimonials" className="relative w-full">
+        <span className="shape-decoration-round-left -z-10" />
+      </span>
+      <div className="body-responsive-container flex flex-col items-center gap-6">
+        <h1 className="text-section-title text-center">Testimonials</h1>
+        <h2 className="text-description max-w-xs px-5 text-center lg:max-w-4xl">
           Using <span className="font-semibold">Buzz</span> enables you to
           accomplish your digital needs from the comfort of your home.
         </h2>
-        <span className="shape-decoration-round-left -z-10" />
       </div>
-
-      <section className="w-screen lg:w-[70vw] lg:overflow-clip">
+      <section className="body-responsive-container lg:overflow-clip">
         <div className="flex w-fit flex-row gap-5 p-5 max-sm:animate-scrollRight lg:grid lg:grid-cols-2 lg:gap-20">
           {testimonials.map((testimonialData) => (
             <div
@@ -261,39 +262,46 @@ export default function Home() {
         </div>
       </section>
 
-      <h1 id="faq" className="text-section-title text-center">
-        FAQ’s
-      </h1>
-
-      <section className="relative flex flex-col gap-5 px-5 lg:gap-10 lg:px-[25%]">
+      {/* faq *********************************************************************************************/}
+      <span id="faq" />
+      <h1 className="text-section-title body-responsive-container text-center">FAQ’s</h1>
+      <section className="body-responsive-container relative flex flex-col gap-5 lg:gap-10 lg:px-[10%]">
         {faqs.map((faqData) => (
           <FAQCard key={faqData.id} faqData={faqData} />
         ))}
-        <span className="shape-decoration-round-bottom-right -z-10" />
       </section>
 
-      <section className="px-5 lg:px-[15%]">
-        <div className="flex w-full flex-row gap-3 lg:gap-40">
-          <div className="flex flex-col justify-evenly gap-5 lg:gap-0">
+      <span className="relative w-full">
+        <span className="shape-decoration-round-bottom-right -z-10" />
+      </span>
+
+      {/* download *********************************************************************************************/}
+
+      <section className="body-responsive-container">
+        <div className="flex w-full flex-row justify-between gap-5 lg:gap-40">
+          <div className="flex flex-col justify-evenly gap-5 lg:w-[50%] lg:gap-0">
             <h2 className="text-section-title">
               Download <br /> the app
             </h2>
+
             <p className="text-description">
               Our app is available both on the play store and the app store,
               latest update is here.
             </p>
-
             <div className="flex w-fit flex-col gap-5 lg:flex-row lg:gap-8">
               <GetAppFrom />
             </div>
           </div>
-          <div className="flex flex-shrink-0 flex-row justify-end">
+          <div className="my-auto flex-shrink-0">
             <MockUp5 className="w-[120px] lg:w-[350px]" />
           </div>
         </div>
       </section>
 
-      <section id="contact" className="px-5 lg:px-[15%]">
+      {/* contact news letter *********************************************************************************************/}
+      <span id="contact" />
+
+      <section className="body-responsive-container">
         <div className="flex flex-col gap-8 rounded-2xl bg-primary-pink-500 px-5 py-14 text-white lg:px-20">
           <h2 className="text-section-subtitle">
             Subscribe to our newsletter to get updated

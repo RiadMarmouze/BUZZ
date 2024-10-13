@@ -1,0 +1,11 @@
+.questionText {
+    @apply text-sm font-semibold lg:text-2xl;
+}
+
+.answerText {
+    @apply text-sm font-semibold lg:text-xl;
+}
+
+.answerDetailsText {
+    @apply text-xs lg:text-xl;
+}

@@ -16,12 +16,12 @@ const Footer: React.FC = () => {
     <div className="flex flex-col">
       <div className="flex flex-col gap-5 p-10">
         <Link href="/" passHref>
-          <div className="relative flex w-full items-center justify-center gap-4 lg:w-fit">
+          <div className="relative flex items-center gap-4">
             <LogoIcon className="h-16 fill-header-bg-secondary-light" />
             <LogoText className="h-10 fill-header-bg-secondary-light" />
           </div>
         </Link>
-        <div className="flex flex-col justify-between gap-10 lg:flex-row lg:gap-0">
+        <div className="grid grid-cols-2 gap-10 lg:flex lg:flex-row lg:justify-between lg:gap-0">
           {/* Main Links Section */}
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-bold uppercase lg:text-base">{mainLinks.title}</h3>
@@ -91,15 +91,15 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-4 lg:border-l lg:border-footer-bg-secondary-light lg:pl-4">
-            <div className="flex flex-col gap-4">
+          <div className="col-span-2 flex flex-row gap-10 lg:flex-col lg:gap-4 lg:border-l lg:border-footer-bg-secondary-light lg:pl-4">
+            <div className="flex flex-1 flex-col gap-4">
               <h3 className="text-sm font-bold uppercase lg:text-base">Phone:</h3>
               <div className="flex flex-col gap-2">
                 <p className={`${styles.footerLink}`}>+213 777 58 59 66</p>
                 <p className={`${styles.footerLink}`}>+213 777 58 59 66</p>
               </div>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-1 flex-col gap-4">
               <h3 className="font-bold uppercase">Address: </h3>
               <p className={`${styles.footerLink}`}>
                 123 Rue Didouche Mourad, Alger Centre, Alger.
@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
           <p className="text-sm lg:text-base">© apex.tech2024</p>
         </div>
 
-        <div className="grid grid-cols-4 justify-center gap-4 lg:flex lg:flex-row">
+        <div className="grid grid-cols-3 justify-center gap-4 lg:flex lg:flex-row">
           {paymentMethods.map((method, methodIdx) => (
             <div
               key={methodIdx}

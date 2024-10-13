@@ -5,9 +5,9 @@ import CustomButton from "./components/CustomButton/CustomButton";
 
 export default function NotFoundPage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center">
-      <div className="w-full max-w-3xl">
-        <div className="flex flex-col items-center justify-center space-y-6">
+    <div className="flex justify-center">
+      <div className="body-responsive-container w-full py-10 lg:py-20">
+        <div className="flex flex-col items-center space-y-6">
           {/* SVG Image */}
           <div className="flex h-auto w-full max-w-xs justify-center">
             <Image
@@ -46,6 +46,7 @@ export default function NotFoundPage() {
               darkBorderColor="border-primary-pink-800"
               lightBorderHoverColor="hover:border-primary-pink-600"
               darkBorderHoverColor="hover:border-primary-pink-900"
+              raduis="rounded-md lg:rounded-2xl"
             />
           </Link>
         </div>

@@ -1,0 +1,11 @@
+.userNameText{
+    @apply text-xs font-bold leading-tight lg:text-base;
+}
+
+.userRoleTexts{
+    @apply text-[8px] leading-tight lg:text-sm;
+}
+
+.testimonialBodyText{
+    @apply text-xs lg:text-xl;
+}
